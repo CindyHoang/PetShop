@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+	<html>
+	<head>
+		<title> Chibi Pet Game </title>
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="http://code.jquery.com/mobile/1.3.1/jquery.mobile-1.3.1.min.css" />
+        <script src="http://code.jquery.com/jquery-1.9.1.min.js"></script>
+        <script src="http://code.jquery.com/mobile/1.3.1/jquery.mobile-1.3.1.min.js"></script>
+		<script type="text/javascript">
+			function start() {
+				$('#happypanda').hide();
+				$('#food').hide();
+			}
+			function eat() {
+				$('#panda').hide();
+				$('#food').show('slow', function() {
+					$('#food').hide('fast', function() {
+						$('#happypanda').show('slow', function() {
+							$('#panda').show();
+							$('#happypanda').slideUp(300).delay(800).fadeOut(400);
+						});
+					});
+				});
+				$('#happypanda').hide();
+			}
+		</script>
+		
+	</head>
+		
+		<body onload = "start();">
+		<div data-role="page">
+			<div data-role"header">
+				<h1> CHIBI PET </h1>
+			</div> <!--  END HEADER -->
+		
+		<div data-role="content">
+			<input type = "text"></input>
+			<center>
+			<img id="panda" src="http://i.imgur.com/uel52Ov.png" />
+			<img id="happypanda" src="http://i.imgur.com/yB66A53.png" />
+			<img id="food" src="http://i.imgur.com/8OyoXfB.png" />
+			</center>
+			<ul id = "chibi" data-role = "listview">
+		</div> <!-- END OF CONTENT -->
+		
+		<div dat-role="footer" data-position="fixed">
+			<nav data-role="navbar">
+				<ul>
+				<li><a data-role="button" data-inline="true" type="submit" onclick="eat();"> 
+				<img src="http://i.imgur.com/mrZAJsa.png" height="100" width="100"/></a></li> <!--FOOD -->
+				<li><a data-role="button" data-inline="true" type="submit">
+				<img src="http://i.imgur.com/qZ3mvfm.png" height="100" width="100"/></a></li> <!-- BED -->
+				<li><a data-role="button" data-inline="true" type="submit">
+				<img src="http://i.imgur.com/icb8DNM.png" height="100" width="100"/></a></li> <!-- BRUSH -->
+				<li><a data-role="button" data-inline="true" type="submit">
+				<img src="http://i.imgur.com/itdWkmX.png" height="100" width="100"/></a></li> <!-- POOP -->
+				
+				</ul>
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+		</body>
+	</html>
