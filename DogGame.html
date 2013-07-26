@@ -10,11 +10,50 @@
 			function start() {
 				$('#happypanda').hide();
 				$('#food').hide();
+				$('#bed').hide();
+				$('#brush').hide();
+				$('#poop').hide();
 			}
 			function eat() {
 				$('#panda').hide();
 				$('#food').show('slow', function() {
 					$('#food').hide('fast', function() {
+						$('#happypanda').show('slow', function() {
+							$('#panda').show();
+							$('#happypanda').slideUp(300).delay(800).fadeOut(400);
+						});
+					});
+				});
+				$('#happypanda').hide();
+			}
+			function sleep() {
+				$('#panda').hide();
+				$('#bed').show('slow', function() {
+					$('#bed').hide('fast', function() {
+						$('#happypanda').show('slow', function() {
+							$('#panda').show();
+							$('#happypanda').slideUp(300).delay(800).fadeOut(400);
+						});
+					});
+				});
+				$('#happypanda').hide();
+			}
+			function clean() {
+				$('#panda').hide();
+				$('#brush').show('slow', function() {
+					$('#brush').hide('fast', function() {
+						$('#happypanda').show('slow', function() {
+							$('#panda').show();
+							$('#happypanda').slideUp(300).delay(800).fadeOut(400);
+						});
+					});
+				});
+				$('#happypanda').hide();
+			}
+			function toilet() {
+				$('#panda').hide();
+				$('#poop').show('slow', function() {
+					$('#poop').hide('fast', function() {
 						$('#happypanda').show('slow', function() {
 							$('#panda').show();
 							$('#happypanda').slideUp(300).delay(800).fadeOut(400);
@@ -39,6 +78,10 @@
 			<img id="panda" src="http://i.imgur.com/uel52Ov.png" />
 			<img id="happypanda" src="http://i.imgur.com/yB66A53.png" />
 			<img id="food" src="http://i.imgur.com/8OyoXfB.png" />
+			<img id="bed" src="http://i.imgur.com/OxrMa0B.png" />
+			<img id="brush" src="http://i.imgur.com/eU8BwOL.png" />
+			<img id="poop" src="http://i.imgur.com/0OdSubS.png" />
+			
 			</center>
 			<ul id = "chibi" data-role = "listview">
 		</div> <!-- END OF CONTENT -->
@@ -48,11 +91,11 @@
 				<ul>
 				<li><a data-role="button" data-inline="true" type="submit" onclick="eat();"> 
 				<img src="http://i.imgur.com/mrZAJsa.png" height="100" width="100"/></a></li> <!--FOOD -->
-				<li><a data-role="button" data-inline="true" type="submit">
+				<li><a data-role="button" data-inline="true" type="submit" onclick="sleep();">
 				<img src="http://i.imgur.com/qZ3mvfm.png" height="100" width="100"/></a></li> <!-- BED -->
-				<li><a data-role="button" data-inline="true" type="submit">
+				<li><a data-role="button" data-inline="true" type="submit" onclick="clean();">
 				<img src="http://i.imgur.com/icb8DNM.png" height="100" width="100"/></a></li> <!-- BRUSH -->
-				<li><a data-role="button" data-inline="true" type="submit">
+				<li><a data-role="button" data-inline="true" type="submit" onclick="toilet();">
 				<img src="http://i.imgur.com/itdWkmX.png" height="100" width="100"/></a></li> <!-- POOP -->
 				
 				</ul>
