@@ -67,50 +67,40 @@
 
 	</head>
 
-		<body onload = "start();">
+	<body onload = "start();">
 		<div data-role="page">
 			<div data-role"header">
 				<h1> CHIBI PET </h1>
 			</div> <!--  END HEADER -->
 
-		<div data-role="content">
-			<input type = "text"></input>
-			<center>
-			<img id="panda" src="http://i.imgur.com/uel52Ov.png" />
-			<img id="happypanda" src="http://i.imgur.com/yB66A53.png" />
-			<img id="food" src="http://i.imgur.com/8OyoXfB.png" />
-			<img id="bed" src="http://i.imgur.com/OxrMa0B.png" />
-			<img id="brush" src="http://i.imgur.com/eU8BwOL.png" />
-			<img id="poop" src="http://i.imgur.com/0OdSubS.png" />
+			<div data-role="content">
+				<input type = "text"></input>
+				<center>
+				<img id="panda" src="http://i.imgur.com/uel52Ov.png" />
+				<img id="happypanda" src="http://i.imgur.com/yB66A53.png" />
+				<img id="food" src="http://i.imgur.com/8OyoXfB.png" />
+				<img id="bed" src="http://i.imgur.com/OxrMa0B.png" />
+				<img id="brush" src="http://i.imgur.com/eU8BwOL.png" />
+				<img id="poop" src="http://i.imgur.com/0OdSubS.png" />
+				</center>
+				<ul id = "chibi" data-role = "listview">
+			</div> <!-- END OF CONTENT -->
 
-			</center>
-			<ul id = "chibi" data-role = "listview">
-		</div> <!-- END OF CONTENT -->
+			<div dat-role="footer" data-position="fixed">
+				<nav data-role="navbar">
+					<ul>
+					<li><a data-role="button" data-inline="true" type="submit" onclick="eat();"> 
+					<img src="http://i.imgur.com/8OyoXfB.png" height="100" width="100"/></a></li> <!--FOOD -->
+					<li><a data-role="button" data-inline="true" type="submit" onclick="sleep();">
+					<img src="http://i.imgur.com/OxrMa0B.png" height="100" width="100"/></a></li> <!-- BED -->
+					<li><a data-role="button" data-inline="true" type="submit" onclick="clean();">
+					<img src="http://i.imgur.com/eU8BwOL.png" height="100" width="100"/></a></li> <!-- BRUSH -->
+					<li><a data-role="button" data-inline="true" type="submit" onclick="toilet();">
+					<img src="http://i.imgur.com/0OdSubS.png" height="100" width="100"/></a></li> <!-- POOP -->
+					</ul>
+				</nav>
+			</div>
+		</div>
 
-		<div dat-role="footer" data-position="fixed">
-			<nav data-role="navbar">
-				<ul>
-				<li><a data-role="button" data-inline="true" type="submit" onclick="eat();"> 
-				<img src="http://i.imgur.com/8OyoXfB.png" height="100" width="100"/></a></li> <!--FOOD -->
-				<li><a data-role="button" data-inline="true" type="submit" onclick="sleep();">
-				<img src="http://i.imgur.com/OxrMa0B.png" height="100" width="100"/></a></li> <!-- BED -->
-				<li><a data-role="button" data-inline="true" type="submit" onclick="clean();">
-				<img src="http://i.imgur.com/eU8BwOL.png" height="100" width="100"/></a></li> <!-- BRUSH -->
-				<li><a data-role="button" data-inline="true" type="submit" onclick="toilet();">
-				<img src="http://i.imgur.com/0OdSubS.png" height="100" width="100"/></a></li> <!-- POOP -->
-
-				</ul>
-
-
-
-
-
-
-
-
-
-
-
-
-		</body>
+	</body>
 	</html>
