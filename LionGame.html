@@ -6,48 +6,111 @@
         <link rel="stylesheet" href="http://code.jquery.com/mobile/1.3.1/jquery.mobile-1.3.1.min.css" />
         <script src="http://code.jquery.com/jquery-1.9.1.min.js"></script>
         <script src="http://code.jquery.com/mobile/1.3.1/jquery.mobile-1.3.1.min.js"></script>
-		<script src="http://code.jquery.com/jquery-1.9.1.js"></script>
-		<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
-		<script type="text/javascript"> 
-	$(document).ready(function(){
-
-		function hidelion(){
-		$("#chibi").hide().delay(800).fadeIn(400);
-		
-		});
-		
-	});
+		<script type="text/javascript">
+			//Sleeping picture (Zzz..) 1 click = sleep. 2 click = wake.
+			function start() {
+				$('#happylion').hide();
+				$('#food').hide();
+				$('#bed').hide();
+				$('#brush').hide();
+				$('#poop').hide();
+			}
+			function eat() {
+				$('#lion').hide();
+				$('#food').show('slow', function() {
+					$('#food').hide('fast', function() {
+						$('#happylion').show('slow', function() {
+							$('#lion').show();
+							$('#happylion').slideUp(300).delay(800).fadeOut(400);
+						});
+					});
+				});
+				$('#happylion').hide();
+			}
+			function sleep() {
+				$('#lion').hide();
+				$('#bed').show('slow', function() {
+					$('#bed').hide('fast', function() {
+						$('#happylion').show('slow', function() {
+							$('#lion').show();
+							$('#happylion').slideUp(300).delay(800).fadeOut(400);
+						});
+					});
+				});
+				$('#happylion').hide();
+			}
+			function clean() {
+				$('#lion').hide();
+				$('#brush').show('slow', function() {
+					$('#brush').hide('fast', function() {
+						$('#happylion').show('slow', function() {
+							$('#lion').show();
+							$('#happylion').slideUp(300).delay(800).fadeOut(400);
+						});
+					});
+				});
+				$('#happylion').hide();
+			}
+			function toilet() {
+				$('#lion').hide();
+				$('#poop').show('slow', function() {
+					$('#poop').hide('fast', function() {
+						$('#happylion').show('slow', function() {
+							$('#lion').show();
+							$('#happylion').slideUp(300).delay(800).fadeOut(400);
+						});
+					});
+				});
+				$('#happylion').hide();
+			}
 		</script>
-		
+
 	</head>
-		
-		<body>
+
+		<body onload = "start();">
 		<div data-role="page">
 			<div data-role"header">
-				<center><h1> CHIBI PET ~ Lion</h1> </center>
+				<h1> CHIBI PET </h1>
 			</div> <!--  END HEADER -->
-		
-		<div id ="chibi" data-role="content">
+
+		<div data-role="content">
+			<input type = "text"></input>
+			<center>
+			<img id="lion" src="http://i.imgur.com/kWPmNDn.png" width= 330 height= 400 />
+			<img id="happylion" src="http://i.imgur.com/ogWjiVO.png" />
+			<img id="food" src="http://i.imgur.com/dFMvhpz.png" />
+			<img id="bed" src="http://i.imgur.com/i35w2qV.png" />
+			<img id="brush" src="http://i.imgur.com/2nHkiGG.png" />
+			<img id="poop" src="http://i.imgur.com/cyTE6vo.png" />
+
+			</center>
 			<ul id = "chibi" data-role = "listview">
-			<center><img src="http://i.imgur.com/kWPmNDn.png" height = "300" width ="270"> 	</center>
 		</div> <!-- END OF CONTENT -->
-		
+
 		<div dat-role="footer" data-position="fixed">
 			<nav data-role="navbar">
 				<ul>
-					<div id= "food"><li><a data-role="button" data-inline="true" type="submit" onclick="hidelion();"> 
-					
-					<img src="http://i.imgur.com/dFMvhpz.png" height="100" width="100"/></a></li></div> <!--FOOD -->
-					<li><a data-role="button" data-inline="true" type="submit">
-					<img src="http://i.imgur.com/i35w2qV.png" height="100" width="100"/></a></li> <!-- BED -->
-					<li><a data-role="button" data-inline="true" type="submit">
-					<img src="http://i.imgur.com/2nHkiGG.png" height="100" width="100"/></a></li> <!-- BRUSH -->
-					<li><a data-role="button" data-inline="true" type="submit">
-					<img src="http://i.imgur.com/itdWkmX.png" height="100" width="100"/></a></li> <!-- POOP --> 
+				<li><a data-role="button" data-inline="true" type="submit" onclick="eat();"> 
+				<img src="http://i.imgur.com/dFMvhpz.png" height="100" width="100"/></a></li> <!--FOOD -->
+				<li><a data-role="button" data-inline="true" type="submit" onclick="sleep();">
+				<img src="http://i.imgur.com/i35w2qV.png" height="100" width="100"/></a></li> <!-- BED -->
+				<li><a data-role="button" data-inline="true" type="submit" onclick="clean();">
+				<img src="http://i.imgur.com/2nHkiGG.png" height="100" width="100"/></a></li> <!-- BRUSH -->
+				<li><a data-role="button" data-inline="true" type="submit" onclick="toilet();">
+				<img src="http://i.imgur.com/cyTE6vo.png" height="100" width="100"/></a></li> <!-- POOP -->
+
 				</ul>
-				
-			
-	
-	
+
+
+
+
+
+
+
+
+
+
+
+
 		</body>
 	</html>

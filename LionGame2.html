@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+	<html>
+	<head>
+		<title> Chibi Pet Game </title>
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="http://code.jquery.com/mobile/1.3.1/jquery.mobile-1.3.1.min.css" />
+        <script src="http://code.jquery.com/jquery-1.9.1.min.js"></script>
+        <script src="http://code.jquery.com/mobile/1.3.1/jquery.mobile-1.3.1.min.js"></script>
+		<script src="http://code.jquery.com/jquery-1.9.1.js"></script>
+		<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+		<script type="text/javascript"> 
+	$(document).ready(function(){
+
+		function hidelion(){
+		$("#chibi").hide().delay(800).fadeIn(400);
+		
+		});
+		
+	});
+		</script>
+		
+	</head>
+		
+		<body>
+		<div data-role="page">
+			<div data-role"header">
+				<center><h1> CHIBI PET ~ Lion</h1> </center>
+			</div> <!--  END HEADER -->
+		
+		<div id ="chibi" data-role="content">
+			<ul id = "chibi" data-role = "listview">
+			<center><img src="http://i.imgur.com/kWPmNDn.png" height = "300" width ="270"> 	</center>
+		</div> <!-- END OF CONTENT -->
+		
+		<div dat-role="footer" data-position="fixed">
+			<nav data-role="navbar">
+				<ul>
+					<div id= "food"><li><a data-role="button" data-inline="true" type="submit" onclick="hidelion();"> 
+					
+					<img src="http://i.imgur.com/dFMvhpz.png" height="100" width="100"/></a></li></div> <!--FOOD -->
+					<li><a data-role="button" data-inline="true" type="submit">
+					<img src="http://i.imgur.com/i35w2qV.png" height="100" width="100"/></a></li> <!-- BED -->
+					<li><a data-role="button" data-inline="true" type="submit">
+					<img src="http://i.imgur.com/2nHkiGG.png" height="100" width="100"/></a></li> <!-- BRUSH -->
+					<li><a data-role="button" data-inline="true" type="submit">
+					<img src="http://i.imgur.com/itdWkmX.png" height="100" width="100"/></a></li> <!-- POOP --> 
+				</ul>
+				
+			
+	
+	
+		</body>
+	</html>
