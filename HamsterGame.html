@@ -8,56 +8,101 @@
         <script src="http://code.jquery.com/mobile/1.3.1/jquery.mobile-1.3.1.min.js"></script>
 		<script type="text/javascript">
 			//Sleeping picture (Zzz..) 1 click = sleep. 2 click = wake.
-			function start() {
+			function start() { //hides all pictures at beginning other than original image
 				$('#happyhamster').hide();
+				$('#hungry').hide();
+				$('#sleepy').hide();
+				$('#dirty').hide();
+				$('#potty').hide();
 				$('#food').hide();
 				$('#bed').hide();
 				$('#brush').hide();
 				$('#poop').hide();
+				
+				var refreshId = setTimeout(function() { //image appears when hungry 
+					$('#hamster').hide();
+					$('#hungry').show();
+					//alert("RAH");
+				}, 5000);
+				
+				var refreshId2 = setTimeout(function() { //image appears when sleepy
+					$('#hamster').hide();
+					$('#sleepy').show();
+				}, 10000);
+				
+				var refreshId3 = setTimeout(function() { //image appears when dirty
+					$('#hamster').hide();
+					$('#dirty').show();
+				}, 15000);
+				
+				var refreshId4 = setTimeout(function() { //image appears when needs to poop
+					$('#hamster').hide();
+					$('#potty').show();
+				}, 25000);
 			}
-			function eat() {
-				$('#hamster').hide();
-				$('#food').show('slow', function() {
-					$('#food').hide();
-						$('#happyhamster').show('slow', function() {
-							$('#happyhamster').hide();
-							$('#hamster').show();
-						});
-				});
-				$('#happyhamster').hide();
+			function eat() { //when eat button is clicked alert if it isn't hungry 
+				if ($('#hungry').is(":hidden")) {
+					alert("I'M NOT HUNGRY. I'M ON A DIET. MY BELLY IS BIG ENOUGH.");
+				}
+				else { //when eat is clicked and is hungry, it'll eat
+					$('#hungry').hide();
+					$('#food').show('slow', function() {
+						$('#food').hide();
+							$('#happyhamster').show('slow', function() {
+								$('#happyhamster').hide();
+								$('#hamster').show();
+							});
+					});
+					$('#happyhamster').hide();
+				}
 			}
-			function sleep() {
-				$('#hamster').hide();
-				$('#bed').show('slow', function() {
-					$('#bed').hide();
-						$('#happyhamster').show('slow', function() {
-							$('#happyhamster').hide();
-							$('#hamster').show();
-						});
-				});
-				$('#happyhamster').hide();
+			function sleep() { //when sleep is clicked, alert if it isn't sleepy
+				if ($('#sleepy').is(":hidden")){
+					alert("I'M NOT SLEEPY. I'M JUST LAZY~ :3");
+				}
+				else { //when sleep is click, sleep if sleepy
+					$('#sleepy').hide();
+					$('#bed').show('slow', function() {
+						$('#bed').hide();
+							$('#happyhamster').show('slow', function() {
+								$('#happyhamster').hide();
+								$('#hamster').show();
+							});
+					});
+					$('#happyhamster').hide();
+				}
 			}
-			function clean() {
-				$('#hamster').hide();
-				$('#brush').show('slow', function() {
-					$('#brush').hide();
-						$('#happyhamster').show('slow', function() {
-							$('#happyhamster').hide();
-							$('#hamster').show();
-						});
-				});
-				$('#happyhamster').hide();
+			function clean() { //when clean button is clicked, alert if don't want to be brushed
+				if ($('#dirty').is(":hidden")){
+					alert("I'M NOT DIRTY. I'M RATHER CLEAN ACTUALLY :D");
+				}
+				else { //when clean is clicked, brush pet
+					$('#dirty').hide();
+					$('#brush').show('slow', function() {
+						$('#brush').hide();
+							$('#happyhamster').show('slow', function() {
+								$('#happyhamster').hide();
+								$('#hamster').show();
+							});
+					});
+					$('#happyhamster').hide();
+				}
 			}
-			function toilet() {
-				$('#hamster').hide();
-				$('#poop').show('slow', function() {
-					$('#poop').hide();
-						$('#happyhamster').show('slow', function() {
-							$('#happyhamster').hide();
-							$('#hamster').show();
-						});
-				});
-				$('#happyhamster').hide();
+			function toilet() { //when toilet button is clicked, alert if it doesn't need to poop
+				if ($('#potty').is(":hidden")){
+					alert("I DON'T HAVE TO GO POTTY D:");
+				}
+				else {
+					$('#potty').hide(); //when toilet is clicked, clean poop
+					$('#poop').show('slow', function() {
+						$('#poop').hide();
+							$('#happyhamster').show('slow', function() {
+								$('#happyhamster').hide();
+								$('#hamster').show();
+							});
+					});
+					$('#happyhamster').hide();
+				}
 			}
 			//Add a list or intervals of their situations, then set conditionals according to needs
 		</script>
@@ -71,10 +116,14 @@
 			</div> <!--  END HEADER -->
 		
 			<div data-role="content">
-				<input type = "text"></input>
+				<input type = "text" placeholder="Give me a name :D"></input>
 				<center>
 				<img id="hamster" src="http://i.imgur.com/NwQMEeV.png" width=330 height=330/>
 				<img id="happyhamster" src="http://i.imgur.com/naH2EZz.png" />
+				<img id="hungry" src="http://i.imgur.com/v7jhESZ.png" />
+				<img id="sleepy" src="http://i.imgur.com/BhD99qt.png" />
+				<img id="dirty" src="http://i.imgur.com/QzYYQqo.png" />
+				<img id="potty" src="http://i.imgur.com/uzSnrZh.png" />
 				<img id="food" src="http://i.imgur.com/kAG7An0.png" />
 				<img id="bed" src="http://i.imgur.com/r33LYOq.png" />
 				<img id="brush" src="http://i.imgur.com/zZMo80B.png" />
