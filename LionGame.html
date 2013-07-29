@@ -18,48 +18,44 @@
 			function eat() {
 				$('#lion').hide();
 				$('#food').show('slow', function() {
-					$('#food').hide('fast', function() {
+					$('#food').hide();
 						$('#happylion').show('slow', function() {
+							$('#happylion').hide();
 							$('#lion').show();
-							$('#happylion').slideUp(300).delay(800).fadeOut(400);
 						});
-					});
 				});
 				$('#happylion').hide();
 			}
 			function sleep() {
 				$('#lion').hide();
 				$('#bed').show('slow', function() {
-					$('#bed').hide('fast', function() {
+					$('#bed').hide();
 						$('#happylion').show('slow', function() {
+							$('#happylion').hide();
 							$('#lion').show();
-							$('#happylion').slideUp(300).delay(800).fadeOut(400);
 						});
-					});
 				});
 				$('#happylion').hide();
 			}
 			function clean() {
 				$('#lion').hide();
 				$('#brush').show('slow', function() {
-					$('#brush').hide('fast', function() {
+					$('#brush').hide();
 						$('#happylion').show('slow', function() {
+							$('#happylion').hide();
 							$('#lion').show();
-							$('#happylion').slideUp(300).delay(800).fadeOut(400);
 						});
-					});
 				});
 				$('#happylion').hide();
 			}
 			function toilet() {
 				$('#lion').hide();
 				$('#poop').show('slow', function() {
-					$('#poop').hide('fast', function() {
+					$('#poop').hide();
 						$('#happylion').show('slow', function() {
+							$('#happylion').hide();
 							$('#lion').show();
-							$('#happylion').slideUp(300).delay(800).fadeOut(400);
 						});
-					});
 				});
 				$('#happylion').hide();
 			}
@@ -77,7 +73,7 @@
 			<div data-role="content">
 				<input type = "text"></input>
 				<center>
-				<img id="lion" src="http://i.imgur.com/kWPmNDn.png" width= 330 height= 400 />
+				<img id="lion" src="http://i.imgur.com/kWPmNDn.png" width="330" height="400" />
 				<img id="happylion" src="http://i.imgur.com/ogWjiVO.png" />
 				<img id="food" src="http://i.imgur.com/dFMvhpz.png" />
 				<img id="bed" src="http://i.imgur.com/i35w2qV.png" />
@@ -91,13 +87,13 @@
 				<nav data-role="navbar">
 					<ul>
 					<li><a data-role="button" data-inline="true" type="submit" onclick="eat();"> 
-					<img src="http://i.imgur.com/dFMvhpz.png" height="100" width="100"/></a></li> <!--FOOD -->
+					<img src="http://i.imgur.com/dFMvhpz.png" height="50" width="50"/></a></li> <!--FOOD -->
 					<li><a data-role="button" data-inline="true" type="submit" onclick="sleep();">
-					<img src="http://i.imgur.com/i35w2qV.png" height="100" width="100"/></a></li> <!-- BED -->
+					<img src="http://i.imgur.com/i35w2qV.png" height="50" width="50"/></a></li> <!-- BED -->
 					<li><a data-role="button" data-inline="true" type="submit" onclick="clean();">
-					<img src="http://i.imgur.com/2nHkiGG.png" height="100" width="100"/></a></li> <!-- BRUSH -->
+					<img src="http://i.imgur.com/2nHkiGG.png" height="50" width="50"/></a></li> <!-- BRUSH -->
 					<li><a data-role="button" data-inline="true" type="submit" onclick="toilet();">
-					<img src="http://i.imgur.com/cyTE6vo.png" height="100" width="100"/></a></li> <!-- POOP -->
+					<img src="http://i.imgur.com/cyTE6vo.png" height="50" width="50"/></a></li> <!-- POOP -->
 					</ul>
 				</nav>
 			</div>

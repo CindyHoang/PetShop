@@ -18,48 +18,44 @@
 			function eat() {
 				$('#hamster').hide();
 				$('#food').show('slow', function() {
-					$('#food').hide('fast', function() {
+					$('#food').hide();
 						$('#happyhamster').show('slow', function() {
+							$('#happyhamster').hide();
 							$('#hamster').show();
-							$('#happyhamster').slideUp(300).delay(800).fadeOut(400);
 						});
-					});
 				});
 				$('#happyhamster').hide();
 			}
 			function sleep() {
 				$('#hamster').hide();
 				$('#bed').show('slow', function() {
-					$('#bed').hide('fast', function() {
+					$('#bed').hide();
 						$('#happyhamster').show('slow', function() {
+							$('#happyhamster').hide();
 							$('#hamster').show();
-							$('#happyhamster').slideUp(300).delay(800).fadeOut(400);
 						});
-					});
 				});
 				$('#happyhamster').hide();
 			}
 			function clean() {
 				$('#hamster').hide();
 				$('#brush').show('slow', function() {
-					$('#brush').hide('fast', function() {
+					$('#brush').hide();
 						$('#happyhamster').show('slow', function() {
+							$('#happyhamster').hide();
 							$('#hamster').show();
-							$('#happyhamster').slideUp(300).delay(800).fadeOut(400);
 						});
-					});
 				});
 				$('#happyhamster').hide();
 			}
 			function toilet() {
 				$('#hamster').hide();
 				$('#poop').show('slow', function() {
-					$('#poop').hide('fast', function() {
+					$('#poop').hide();
 						$('#happyhamster').show('slow', function() {
+							$('#happyhamster').hide();
 							$('#hamster').show();
-							$('#happyhamster').slideUp(300).delay(800).fadeOut(400);
 						});
-					});
 				});
 				$('#happyhamster').hide();
 			}
@@ -91,13 +87,13 @@
 				<nav data-role="navbar">
 					<ul>
 					<li><a data-role="button" data-inline="true" type="submit" onclick="eat();"> 
-					<img src="http://i.imgur.com/kAG7An0.png" height="100" width="100"/></a></li> <!--FOOD -->
+					<img src="http://i.imgur.com/kAG7An0.png" height="50" width="50"/></a></li> <!--FOOD -->
 					<li><a data-role="button" data-inline="true" type="submit" onclick="sleep();">
-					<img src="http://i.imgur.com/r33LYOq.png" height="100" width="100"/></a></li> <!-- BED -->
+					<img src="http://i.imgur.com/r33LYOq.png" height="50" width="50"/></a></li> <!-- BED -->
 					<li><a data-role="button" data-inline="true" type="submit" onclick="clean();">
-					<img src="http://i.imgur.com/zZMo80B.png" height="100" width="100"/></a></li> <!-- BRUSH -->
+					<img src="http://i.imgur.com/zZMo80B.png" height="50" width="50"/></a></li> <!-- BRUSH -->
 					<li><a data-role="button" data-inline="true" type="submit" onclick="toilet();">
-					<img src="http://i.imgur.com/T4G5rBK.png" height="100" width="100"/></a></li> <!-- POOP -->
+					<img src="http://i.imgur.com/T4G5rBK.png" height="50" width="50"/></a></li> <!-- POOP -->
 					</ul>
 				</nav>
 			</div>
